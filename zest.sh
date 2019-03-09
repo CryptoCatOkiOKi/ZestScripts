@@ -47,6 +47,7 @@ read OPTION
 ALIAS=""
 
 if [[ ${OPTION} == "1" ]] ; then
+  rm ${NAME}_list.sh > /dev/null 2>&1
   wget ${URL}${NAME}_list.sh -O ${NAME}_list.sh > /dev/null 2>&1
   chmod 777 ${NAME}_list.sh
   dos2unix ${NAME}_list.sh > /dev/null 2>&1
@@ -54,6 +55,7 @@ if [[ ${OPTION} == "1" ]] ; then
 elif [[ ${OPTION} == "2" ]] ; then
   echo -e "${RED}Which node do you want to check if synced? Enter alias (if empty then will check all)${NC}"
   read ALIAS
+  rm ${NAME}_check_sync.sh > /dev/null 2>&1
   wget ${URL}${NAME}_check_sync.sh -O ${NAME}_check_sync.sh > /dev/null 2>&1
   chmod 777 ${NAME}_check_sync.sh  
   dos2unix ${NAME}_check_sync.sh > /dev/null 2>&1
@@ -61,6 +63,7 @@ elif [[ ${OPTION} == "2" ]] ; then
 elif [[ ${OPTION} == "3" ]] ; then
   echo -e "${RED}Which node do you want to check sync and resync? Enter alias (if empty then will check all)${NC}"
   read ALIAS
+  rm ${NAME}_check_resync_all.sh > /dev/null 2>&1
   wget ${URL}${NAME}_check_resync_all.sh -O ${NAME}_check_resync_all.sh > /dev/null 2>&1
   chmod 777 ${NAME}_check_resync_all.sh  
   dos2unix ${NAME}_check_resync_all.sh > /dev/null 2>&1
@@ -68,6 +71,7 @@ elif [[ ${OPTION} == "3" ]] ; then
 elif [[ ${OPTION} == "4" ]] ; then
   echo -e "${RED}Which node do you want to restart? Enter alias (if empty then will check all)${NC}"
   read ALIAS
+  rm ${NAME}_restart.sh > /dev/null 2>&1
   wget ${URL}${NAME}_restart.sh -O ${NAME}_restart.sh > /dev/null 2>&1
   chmod 777 ${NAME}_restart.sh  
   dos2unix ${NAME}_restart.sh > /dev/null 2>&1
@@ -75,11 +79,13 @@ elif [[ ${OPTION} == "4" ]] ; then
 elif [[ ${OPTION} == "5" ]] ; then
   echo -e "${RED}Which node do you want to stop? Enter alias (if empty then will check all)${NC}"
   read ALIAS
+  rm ${NAME}_check_sync.sh > /dev/null 2>&1
   wget ${URL}${NAME}_stop.sh -O ${NAME}_stop.sh > /dev/null 2>&1
   chmod 777 ${NAME}_stop.sh  
   dos2unix ${NAME}_stop.sh > /dev/null 2>&1
   /bin/bash ./${NAME}_stop.sh $ALIAS
 elif [[ ${OPTION} == "6" ]] ; then
+  rm ${NAME}_setupv2.sh > /dev/null 2>&1
   wget ${URL}${NAME}_setupv2.sh -O ${NAME}_setupv2.sh > /dev/null 2>&1
   chmod 777 ${NAME}_setupv2.sh
   dos2unix ${NAME}_setupv2.sh > /dev/null 2>&1
@@ -87,6 +93,7 @@ elif [[ ${OPTION} == "6" ]] ; then
 elif [[ ${OPTION} == "7" ]] ; then
   echo -e "${RED}For which node do you want to check masternode status? Enter alias (if empty then will check all)${NC}"
   read ALIAS
+  rm ${NAME}_check_status.sh > /dev/null 2>&1
   wget ${URL}${NAME}_check_status.sh -O ${NAME}_check_status.sh > /dev/null 2>&1
   chmod 777 ${NAME}_check_status.sh  
   dos2unix ${NAME}_check_status.sh > /dev/null 2>&1
@@ -94,6 +101,7 @@ elif [[ ${OPTION} == "7" ]] ; then
 elif [[ ${OPTION} == "8" ]] ; then  
   echo -e "${RED}For which node do you want to check masternode status? Enter alias (mandatory!)${NC}"
   read ALIAS
+  rm ${NAME}_resync.sh > /dev/null 2>&1
   wget ${URL}${NAME}_resync.sh -O ${NAME}_resync.sh > /dev/null 2>&1
   chmod 777 ${NAME}_resync.sh
   dos2unix ${NAME}_resync.sh > /dev/null 2>&1
