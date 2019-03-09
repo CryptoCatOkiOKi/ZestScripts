@@ -1,7 +1,7 @@
 #!/bin/bash
 
 NAME="zest"
-URL="https://raw.githubusercontent.com/MONKEYPROJECT/Guides/master/"
+URL="https://raw.githubusercontent.com/CryptoCatOkiOKi/ZestScripts/master/"
 
 ##
 ##
@@ -102,5 +102,5 @@ elif [[ ${OPTION} == "9" ]] ; then
   exit 0
 fi
 ###
-read -n 1 -s -r -p "****Press any key to go back to ${NAME}EY MAIN MENU*****"
+read -n 1 -s -r -p "****Press any key to go back to ${NAME} MAIN MENU*****"
 /bin/bash ./${NAME}.sh
