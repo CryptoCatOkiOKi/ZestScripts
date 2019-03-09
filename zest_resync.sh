@@ -1,7 +1,7 @@
 #!/bin/bash
 
 NAME="zest"
-BLOCKHASHCOINEXPLORER=$(curl -s4 https://www.coinexplorer.net/api//block/latest | jq -r ".result.hash")	
+BLOCKHASHCOINEXPLORER=$(curl -s4 https://www.coinexplorer.net/api/${NAME}/block/latest | jq -r ".result.hash")	
 
 ##
 ## Script sync wallet using current bootstrap
