@@ -70,7 +70,7 @@ if [[ ${DOSETUP,,} =~ "y" ]] ; then
   wget ${URL}${WALLETDL}
   chmod 775 ${WALLETDL}
   tar -xvzf ${WALLETDL}
-  cd ./${NAME}-2.3.0/bin
+  cd ./${WALLETDLFOLDER}/bin
   sudo chmod 775 *
   sudo mv ./${NAME}* /usr/bin
   #read
