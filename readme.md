@@ -1,5 +1,5 @@
 Zest Scripts
 
 ```
-wget https://raw.githubusercontent.com/MONKEYPROJECT/Guides/master/monk.sh -O monk.sh && chmod 755 monk.sh && ./monk.sh
+wget https://github.com/CryptoCatOkiOKi/ZestScripts/blob/master/zest.sh -O zest.sh && chmod 755 zest.sh && ./zest.sh
 ```
