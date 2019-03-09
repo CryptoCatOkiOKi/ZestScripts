@@ -3,7 +3,7 @@
 PARAM1=$*
 NAME="zest"
 BLOCKHASHCOINEXPLORER=$(curl -s4 https://www.coinexplorer.net/api/${NAME}/block/latest | jq -r ".result.hash")
-LATESTWALLETVERSION="2030003"
+LATESTWALLETVERSION="1000301"
 
 if [ -z "$PARAM1" ]; then
   PARAM1="*"  	  
