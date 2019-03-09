@@ -193,6 +193,9 @@ for i in `seq 1 1 $MNCOUNT`; do
   echo "daemon=1" >> ${NAME}.conf_TEMP
   echo "logtimestamps=1" >> ${NAME}.conf_TEMP
   echo "maxconnections=256" >> ${NAME}.conf_TEMP
+  echo "addnode=140.82.33.223" >> ${NAME}.conf_TEMP
+  echo "addnode=80.240.29.18" >> ${NAME}.conf_TEMP
+  echo "addnode=209.250.239.164" >> ${NAME}.conf_TEMP  
 
   echo "" >> ${NAME}.conf_TEMP
   echo "port=$PORT" >> ${NAME}.conf_TEMP
