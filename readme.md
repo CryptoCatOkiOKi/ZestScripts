@@ -36,7 +36,7 @@ After the MN is running and synced, you need to configure the desktop wallet acc
 1. Open the ZEST Desktop Wallet.
 2. Go to FILE -> Receiving Addresses
 3. Create new Address, name it **MN1**
-4. Send **2000** **ZEST** to **MN1**.
+4. Send **2500** **ZEST** to **MN1**.
 5. Wait for 20 confirmations.
 6. Go to **Tools -> "Debug console - Console"**
 7. Type the following command: **masternode outputs**
